@@ -23,39 +23,13 @@ const currentPath = Astro.url.pathname;
       <!-- LOGO + NOMBRE COLEGIO                  -->
       <!-- ═══════════════════════════════════════ -->
       <div class="flex items-center gap-3 flex-shrink-0 group cursor-pointer">
-        <!-- Logo circular -->
+        <!-- Logo -->
         <div class="logo-container relative">
           <div
-            class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center overflow-hidden shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
-            style="background: linear-gradient(135deg, #09215D 0%, #0d2d7a 50%, #C90203 100%);"
+            class="w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center transition-all duration-300 group-hover:scale-105"
           >
-            <!-- Icono SVG institucional -->
-            <svg
-              viewBox="0 0 48 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-8 h-8 lg:w-9 lg:h-9"
-            >
-              <!-- Letra D estilizada con líneas de conocimiento -->
-              <path
-                d="M10 8 H20 Q34 8 34 24 Q34 40 20 40 H10 Z"
-                fill="none"
-                stroke="white"
-                stroke-width="2.5"
-                stroke-linejoin="round"
-              />
-              <path d="M10 16 H26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-              <path d="M10 24 H30" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-              <path d="M10 32 H26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-              <!-- Punto de acento rojo -->
-              <circle cx="38" cy="10" r="3" fill="#C90203"/>
-            </svg>
+            <img src="/logo.png" alt="Logo Colegio Charles Darwin" class="w-full h-full object-contain drop-shadow-sm" />
           </div>
-          <!-- Anillo decorativo al hover -->
-          <div
-            class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style="box-shadow: 0 0 0 2px #09215D33;"
-          ></div>
         </div>
 
         <!-- Texto del colegio -->
