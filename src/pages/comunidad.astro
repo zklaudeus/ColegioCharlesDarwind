@@ -1,0 +1,365 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+// Datos de la comunidad educativa
+const comunidad = [
+  {
+    id: 1,
+    nombre: "Loreto Ramirez Campos",
+    cargo: "Sostenedora",
+    area: "Matemáticas • Física • Astronomía",
+    descripcion: "Liderazgo institucional enfocado en la gestión educativa integral y docencia en el área de ciencias exactas.",
+    categoria: "Directivos",
+    foto: null,
+  },
+  {
+    id: 2,
+    nombre: "Dorys Chandia Molina",
+    cargo: "Directora",
+    area: "Economía y Sociedad • Cine",
+    descripcion: "Líder del proyecto educativo, promoviendo la excelencia académica y el desarrollo integral de la comunidad escolar.",
+    categoria: "Directivos",
+    foto: null,
+  },
+  {
+    id: 3,
+    nombre: "Gisell Lagos Escobar",
+    cargo: "Coordinadora PIE",
+    area: "Educación Diferencial",
+    descripcion: "Especialista encargada de coordinar estrategias de inclusión escolar y apoyo psicopedagógico especializado.",
+    categoria: "Directivos",
+    foto: null,
+  },
+  {
+    id: 4,
+    nombre: "Moisés Lopez Kappes",
+    cargo: "Encargado de Convivencia Escolar",
+    area: "Psicología • Integración Escolar",
+    descripcion: "Vela por un clima escolar positivo, apoyando el bienestar emocional y la convivencia armónica de los estudiantes.",
+    categoria: "Directivos",
+    foto: null,
+  },
+  {
+    id: 5,
+    nombre: "Fernanda Baeza Parra",
+    cargo: "Profesora Jefe de 7° Básico",
+    area: "Educación Física • Deportes",
+    descripcion: "Fomenta el desarrollo físico, el trabajo en equipo y la adopción de hábitos de vida saludable.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 6,
+    nombre: "Aldo Norambuena Jorquera",
+    cargo: "Profesor Jefe de 2° Medio",
+    area: "Historia • Educación Ciudadana",
+    descripcion: "Promueve el pensamiento crítico y la comprensión del entorno sociohistórico para la formación ciudadana.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 7,
+    nombre: "Sandra Barria Borquez",
+    cargo: "Profesora Jefe de 3° Medio",
+    area: "Ciencias Naturales • Química • Biología",
+    descripcion: "Impulsa la investigación científica y la comprensión del mundo natural a través de metodologías participativas.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 8,
+    nombre: "Nicole Yurie Gonzales",
+    cargo: "Profesora Jefe de 4° Medio",
+    area: "Lenguaje y Comunicación",
+    descripcion: "Especialista en fomento lector, análisis crítico y desarrollo de habilidades comunicativas avanzadas.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 9,
+    nombre: "Aurora Garay",
+    cargo: "Profesora de Matemáticas",
+    area: "Lenguaje y Comunicación",
+    descripcion: "Docente versátil enfocada en fortalecer el pensamiento lógico-matemático y las competencias lingüísticas.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 10,
+    nombre: "David Aravena Quintana",
+    cargo: "Profesor de Matemáticas",
+    area: "Música • Interpretación Musical",
+    descripcion: "Integra el pensamiento lógico con el desarrollo artístico, fomentando la sensibilidad musical de los estudiantes.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 11,
+    nombre: "Celeste Abarza Gonzales",
+    cargo: "Profesora de Artes",
+    area: "Remediales y Multimediales",
+    descripcion: "Fomenta la creatividad y la expresión artística a través de la integración de medios visuales y tradicionales.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 12,
+    nombre: "Vania Alvarez Campos",
+    cargo: "Profesora de Inglés",
+    area: "Administración",
+    descripcion: "Facilita el aprendizaje del idioma inglés como herramienta clave para el desarrollo global del estudiante.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 13,
+    nombre: "Matías Almarza Silva",
+    cargo: "Profesor de Filosofía",
+    area: "Filosofía",
+    descripcion: "Desarrolla el pensamiento reflexivo y ético, motivando a los estudiantes a cuestionar y comprender la realidad.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 14,
+    nombre: "Freddy Bohn",
+    cargo: "Profesor Tallerista",
+    area: "Taller de Ajedrez",
+    descripcion: "Guía el taller de ajedrez, potenciando la concentración, la estrategia y la resolución de problemas lógicos.",
+    categoria: "Docentes",
+    foto: null,
+  },
+  {
+    id: 15,
+    nombre: "Carla Muñoz Soto",
+    cargo: "Profesora PIE",
+    area: "Jefatura 8° Básico",
+    descripcion: "Brinda apoyo pedagógico especializado, asegurando la inclusión y el éxito académico de todos los estudiantes.",
+    categoria: "PIE",
+    foto: null,
+  },
+  {
+    id: 16,
+    nombre: "Katalina Bustamante C.",
+    cargo: "Educadora Diferencial",
+    area: "Jefatura 1° Medio",
+    descripcion: "Especialista en atención a la diversidad escolar y diseño universal de aprendizaje adaptado.",
+    categoria: "PIE",
+    foto: null,
+  },
+  {
+    id: 17,
+    nombre: "Pedro Aburto Heimpel",
+    cargo: "Psicólogo",
+    area: "Convivencia Escolar • PIE",
+    descripcion: "Acompaña el desarrollo emocional y psicosocial, brindando contención y estrategias de integración escolar.",
+    categoria: "PIE",
+    foto: null,
+  },
+  {
+    id: 18,
+    nombre: "Paola Cárdenas Mayorga",
+    cargo: "Administración",
+    area: "Biblioteca CRA • Religión",
+    descripcion: "Gestiona recursos bibliotecarios y administrativos, además de apoyar en la formación tecnológica y valórica.",
+    categoria: "Administración",
+    foto: null,
+  },
+  {
+    id: 19,
+    nombre: "Juan Oyarzun",
+    cargo: "Paradocente",
+    area: "Apoyo Escolar",
+    descripcion: "Vela por el orden, la disciplina y el bienestar de los estudiantes durante la jornada escolar.",
+    categoria: "Paradocentes",
+    foto: null,
+  },
+  {
+    id: 20,
+    nombre: "Maria Subiabre",
+    cargo: "Paradocente",
+    area: "Apoyo Escolar",
+    descripcion: "Acompaña la labor educativa supervisando y orientando a los estudiantes en sus actividades diarias.",
+    categoria: "Paradocentes",
+    foto: null,
+  },
+  {
+    id: 21,
+    nombre: "Jocelyn Alvarez",
+    cargo: "Paradocente",
+    area: "Apoyo Escolar",
+    descripcion: "Asiste integralmente en el funcionamiento del establecimiento, asegurando un ambiente escolar seguro.",
+    categoria: "Paradocentes",
+    foto: null,
+  }
+];
+
+const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administración", "Paradocentes"];
+---
+
+<Layout title="Comunidad Escolar | Colegio Charles Darwin" description="Conoce a los profesionales que forman parte de nuestra comunidad educativa, comprometidos con la formación y acompañamiento de nuestros estudiantes.">
+  <Navbar />
+
+  <main class="bg-[#FCFCFC] pt-32 pb-24 min-h-screen">
+    
+    <!-- SECCIÓN INTRODUCTORIA -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
+      <div class="inline-flex items-center gap-3 mb-4">
+        <span class="w-8 h-[1px] bg-[#C90203]"></span>
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C90203]" style="font-family: 'Inter', sans-serif;">Colegio Charles Darwin</span>
+        <span class="w-8 h-[1px] bg-[#C90203]"></span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#09215D] mb-6 tracking-tight" style="font-family: 'Poppins', sans-serif;">
+        Nuestro Equipo
+      </h1>
+      <p class="text-lg text-[#09215D]/70 max-w-3xl mx-auto leading-relaxed font-light" style="font-family: 'Inter', sans-serif;">
+        Conoce a los profesionales que forman parte de nuestra comunidad educativa, comprometidos con la formación, acompañamiento e inclusión de nuestros estudiantes.
+      </p>
+    </section>
+
+    <!-- SISTEMA DE FILTROS -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <div class="flex flex-wrap items-center justify-center gap-3" id="filters-container">
+        {categoriasFiltro.map((cat, index) => (
+          <button 
+            class={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${index === 0 ? 'bg-[#09215D] text-white border-[#09215D] shadow-md' : 'bg-white text-[#09215D]/70 border-[#09215D]/10 hover:border-[#09215D]/30 hover:bg-[#09215D]/5'}`}
+            data-target={cat}
+            style="font-family: 'Inter', sans-serif;"
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+    </section>
+
+    <!-- GRILLA DE TARJETAS (4 columnas) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8" id="community-grid">
+        {comunidad.map(persona => (
+          <div 
+            class="community-card bg-white rounded-[2rem] shadow-lg shadow-[#09215D]/5 border border-[#09215D]/10 overflow-hidden group hover:-translate-y-2 transition-all duration-500"
+            data-category={persona.categoria}
+          >
+            <!-- Cabecera de color Institucional -->
+            <div class="bg-gradient-to-br from-[#09215D] to-[#1a3885] pt-8 pb-6 px-6 relative overflow-hidden flex flex-col items-center text-center">
+              <!-- Elementos decorativos (luces y círculos) -->
+              <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full opacity-30 blur-xl"></div>
+              <div class="absolute top-0 left-0 w-32 h-32 bg-[#C90203]/20 rounded-full opacity-20 blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+
+              <!-- Avatar -->
+              <div class="w-24 h-24 rounded-full bg-white overflow-hidden mb-4 ring-4 ring-white/20 shadow-xl flex-shrink-0 relative z-10 flex items-center justify-center">
+                {persona.foto
+                  ? <img
+                      src={persona.foto}
+                      alt={persona.nombre}
+                      class="w-full h-full object-cover object-top"
+                    />
+                  : <span class="text-3xl font-bold text-[#09215D]/50 font-sans">{persona.nombre.charAt(0)}</span>
+                }
+              </div>
+
+              <h4 class="text-white text-lg font-bold font-sans leading-tight mb-2 relative z-10" style="font-family: 'Poppins', sans-serif;">{persona.nombre}</h4>
+              <span class="inline-block bg-white/10 text-white text-[10px] font-semibold px-3 py-1.5 rounded-full border border-white/20 tracking-wider uppercase relative z-10" style="font-family: 'Inter', sans-serif;">
+                {persona.cargo}
+              </span>
+            </div>
+
+            <!-- Contenido compacto -->
+            <div class="p-6 space-y-4">
+              
+              <!-- Área / Especialidad -->
+              <div class="flex items-start gap-3 group/item">
+                <div class="w-8 h-8 rounded-lg bg-[#09215D]/5 text-[#09215D] flex items-center justify-center flex-shrink-0 group-hover/item:bg-[#09215D] group-hover/item:text-white transition-colors duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-[10px] font-sans text-[#09215D]/50 uppercase tracking-widest mb-0.5 font-semibold">Área / Especialidad</p>
+                  <p class="text-[#09215D] font-sans text-sm font-medium leading-snug">{persona.area}</p>
+                </div>
+              </div>
+
+              <!-- Descripción Breve -->
+              <div class="flex items-start gap-3 group/item pt-2 border-t border-[#09215D]/5">
+                <div class="w-8 h-8 rounded-lg bg-[#09215D]/5 text-[#09215D] flex items-center justify-center flex-shrink-0 group-hover/item:bg-[#09215D] group-hover/item:text-white transition-colors duration-300">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-[10px] font-sans text-[#09215D]/50 uppercase tracking-widest mb-0.5 font-semibold">Perfil</p>
+                  <p class="text-xs text-[#09215D]/80 font-sans leading-relaxed" style="font-family: 'Inter', sans-serif;">{persona.descripcion}</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Mensaje cuando no hay resultados en el filtro -->
+      <div id="no-results-msg" class="hidden text-center py-12">
+        <p class="text-[#09215D]/50 text-lg font-medium" style="font-family: 'Inter', sans-serif;">No se encontraron miembros en esta categoría.</p>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Lógica de Filtrado en Cliente (Vanilla JS)
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.community-card');
+    const noResultsMsg = document.getElementById('no-results-msg');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 1. Actualizar estilos de los botones
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-[#09215D]', 'text-white', 'border-[#09215D]', 'shadow-md');
+          b.classList.add('bg-white', 'text-[#09215D]/70', 'border-[#09215D]/10', 'hover:border-[#09215D]/30', 'hover:bg-[#09215D]/5');
+        });
+        btn.classList.remove('bg-white', 'text-[#09215D]/70', 'border-[#09215D]/10', 'hover:border-[#09215D]/30', 'hover:bg-[#09215D]/5');
+        btn.classList.add('bg-[#09215D]', 'text-white', 'border-[#09215D]', 'shadow-md');
+
+        // 2. Filtrar las tarjetas
+        const targetCategory = btn.getAttribute('data-target');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          
+          if (targetCategory === 'Todos' || cardCategory === targetCategory) {
+            card.style.display = 'block';
+            // Pequeña animación al mostrar
+            card.animate([
+              { opacity: 0, transform: 'scale(0.95)' },
+              { opacity: 1, transform: 'scale(1)' }
+            ], {
+              duration: 300,
+              easing: 'ease-out'
+            });
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // 3. Mostrar mensaje si no hay resultados
+        if (noResultsMsg) {
+          if (visibleCount === 0) {
+            noResultsMsg.classList.remove('hidden');
+          } else {
+            noResultsMsg.classList.add('hidden');
+          }
+        }
+      });
+    });
+  });
+</script>

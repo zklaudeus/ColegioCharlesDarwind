@@ -1,0 +1,452 @@
+---
+// Navbar.astro — Colegio Charles Darwin
+// Navbar institucional moderno, premium y completamente responsive
+const currentPath = Astro.url.pathname;
+---
+
+<!-- Google Fonts: Inter + Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<header
+  id="navbar"
+  class="navbar-header fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20 lg:h-22">
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- LOGO + NOMBRE COLEGIO                  -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="flex items-center gap-3 flex-shrink-0 group cursor-pointer">
+        <!-- Logo circular -->
+        <div class="logo-container relative">
+          <div
+            class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center overflow-hidden shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
+            style="background: linear-gradient(135deg, #09215D 0%, #0d2d7a 50%, #C90203 100%);"
+          >
+            <!-- Icono SVG institucional -->
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8 lg:w-9 lg:h-9"
+            >
+              <!-- Letra D estilizada con líneas de conocimiento -->
+              <path
+                d="M10 8 H20 Q34 8 34 24 Q34 40 20 40 H10 Z"
+                fill="none"
+                stroke="white"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+              <path d="M10 16 H26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+              <path d="M10 24 H30" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+              <path d="M10 32 H26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+              <!-- Punto de acento rojo -->
+              <circle cx="38" cy="10" r="3" fill="#C90203"/>
+            </svg>
+          </div>
+          <!-- Anillo decorativo al hover -->
+          <div
+            class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="box-shadow: 0 0 0 2px #09215D33;"
+          ></div>
+        </div>
+
+        <!-- Texto del colegio -->
+        <div class="leading-tight">
+          <p class="text-xs font-medium tracking-widest uppercase text-red-600" style="font-family: 'Inter', sans-serif; color: #C90203; letter-spacing: 0.12em;">
+            Colegio
+          </p>
+          <h1 class="font-bold tracking-tight text-base lg:text-lg leading-none transition-colors duration-300 group-hover:opacity-80" style="font-family: 'Poppins', sans-serif; color: #09215D;">
+            Charles Darwin
+          </h1>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- MENÚ DESKTOP                           -->
+      <!-- ═══════════════════════════════════════ -->
+      <nav
+        class="hidden lg:flex items-center gap-1"
+        aria-label="Menú principal"
+      >
+        {
+          [
+            { name: "Inicio", href: "/" },
+            { name: "Nosotros", href: "/nosotros" },
+            { name: "Comunidad", href: "/comunidad" },
+            { name: "Proyectos", href: "/proyectos" },
+            { name: "Protocolos", href: "/protocolos" },
+            { name: "Contacto", href: "#" },
+          ].map((item) => {
+            const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+            return (
+            <a
+              href={item.href}
+              class={`nav-item relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group/item ${isActive ? 'bg-[#09215D0D]' : ''}`}
+              style={`font-family: 'Inter', sans-serif; color: ${isActive ? '#C90203' : '#09215D'};`}
+            >
+              <span class="relative z-10 transition-colors duration-300 group-hover/item:text-[#C90203]" style="color: inherit;">
+                {item.name}
+              </span>
+              <!-- Línea animada inferior -->
+              <span
+                class={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full transition-all duration-300 ${isActive ? 'w-3/4' : 'w-0 group-hover/item:w-3/4'}`}
+                style="background-color: #C90203;"
+              ></span>
+              <!-- Fondo hover sutil -->
+              <span
+                class={`absolute inset-0 rounded-lg transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 group-hover/item:opacity-100'}`}
+                style="background-color: #09215D0D;"
+              ></span>
+            </a>
+          )})
+        }
+      </nav>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- ICONOS SOCIALES DESKTOP                -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="hidden lg:flex items-center gap-2">
+        <!-- Divisor -->
+        <div class="w-px h-6 mx-1" style="background-color: #09215D22;"></div>
+
+        <!-- Instagram -->
+        <a  
+        href="https://www.instagram.com/darwindeancud/?hl=es-la"
+        target="_blank" 
+        rel="noopener noreferrer"
+          id="social-instagram"
+          aria-label="Instagram"
+          class="social-btn w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        >
+          <svg viewBox="0 0 24 24" fill="none" class="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a 
+          href="https://web.facebook.com/people/Colegio-Charles-Darwin-de-Ancud/100057382873989/"
+          target="_blank" 
+          rel="noopener noreferrer"
+          type="button"
+          id="social-facebook"
+          aria-label="Facebook"
+          class="social-btn w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          </svg>
+        </a>
+
+        <!-- YouTube -->
+        <a 
+          href="https://www.youtube.com/@charlesdarwinancud7620/videos"
+          target="_blank" 
+          rel="noopener noreferrer"
+          type="button"
+          id="social-youtube"
+          aria-label="YouTube"
+          class="social-btn w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+        >
+          <svg viewBox="0 0 24 24" fill="none" class="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" stroke="currentColor" stroke-width="1.8"/>
+            <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- BOTÓN HAMBURGUESA MOBILE               -->
+      <!-- ═══════════════════════════════════════ -->
+      <button
+        id="hamburger-btn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="lg:hidden relative w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105 focus:outline-none"
+        style="color: #09215D;"
+      >
+        <!-- Icono hamburguesa → X animado -->
+        <div class="w-5 flex flex-col gap-[5px] overflow-hidden">
+          <span
+            id="ham-line-1"
+            class="ham-line block h-[2px] rounded-full transition-all duration-300 origin-center"
+            style="background-color: #09215D;"
+          ></span>
+          <span
+            id="ham-line-2"
+            class="ham-line block h-[2px] rounded-full transition-all duration-300"
+            style="background-color: #09215D; width: 75%;"
+          ></span>
+          <span
+            id="ham-line-3"
+            class="ham-line block h-[2px] rounded-full transition-all duration-300 origin-center"
+            style="background-color: #09215D;"
+          ></span>
+        </div>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- MENÚ MOBILE                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden overflow-hidden transition-all duration-500 ease-in-out"
+    style="max-height: 0; opacity: 0;"
+    aria-hidden="true"
+  >
+    <div class="mx-4 mb-4 rounded-2xl overflow-hidden shadow-2xl border" style="border-color: #09215D14; background: rgba(252,252,252,0.98);">
+      <!-- Nav items mobile -->
+      <nav class="px-2 pt-3 pb-1 flex flex-col gap-1">
+        {
+          [
+            { label: "Inicio",     href: "/",         emoji: "🏠" },
+            { label: "Nosotros",   href: "/nosotros", emoji: "🎓" },
+            { label: "Comunidad",  href: "/comunidad", emoji: "👥" },
+            { label: "Proyectos",  href: "/proyectos",         emoji: "🔬" },
+            { label: "Protocolos", href: "/protocolos",         emoji: "📋" },
+            { label: "Contacto",   href: "#",         emoji: "✉️" },
+          ].map(({ label, href, emoji }) => {
+            const isActive = currentPath === href || (href !== '/' && currentPath.startsWith(href));
+            return (
+            <a
+              href={href}
+              class={`mobile-nav-item flex items-center gap-3 w-full px-4 py-3.5 rounded-xl text-left text-sm font-semibold transition-all duration-200 group/mob ${isActive ? 'bg-[#09215D0D]' : ''}`}
+              style={`font-family: 'Inter', sans-serif; color: ${isActive ? '#C90203' : '#09215D'};`}
+            >
+              <span class="text-base leading-none flex-shrink-0 transition-transform duration-200 group-hover/mob:scale-110">
+                {emoji}
+              </span>
+              <span class="transition-colors duration-200">{label}</span>
+              <!-- Chevron -->
+              <svg class={`ml-auto w-4 h-4 transition-all duration-200 ${isActive ? 'opacity-100 translate-x-0.5' : 'opacity-30 group-hover/mob:opacity-70 group-hover/mob:translate-x-0.5'}`} viewBox="0 0 16 16" fill="none">
+                <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          )})
+        }
+      </nav>
+
+      <!-- Divisor -->
+      <div class="mx-4 my-2 h-px" style="background-color: #09215D12;"></div>
+
+      <!-- Iconos sociales mobile -->
+      <div class="px-4 py-3 flex items-center gap-3">
+        <p class="text-xs font-medium mr-1" style="font-family: 'Inter', sans-serif; color: #09215D66;">Síguenos</p>
+
+        <a
+          href="https://www.instagram.com/darwindeancud/?hl=es-la"
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="social-btn-mobile flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
+        >
+          <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          </svg>
+          <span>Instagram</span>
+        </a>
+
+        <a
+          href="https://web.facebook.com/people/Colegio-Charles-Darwin-de-Ancud/100057382873989/"
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="social-btn-mobile flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+
+        <a
+          href="https://www.youtube.com/@charlesdarwinancud7620/videos"
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="social-btn-mobile flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
+        >
+          <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" stroke="currentColor" stroke-width="1.8"/>
+            <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor"/>
+          </svg>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- ESTILOS DEL NAVBAR                             -->
+<!-- ═══════════════════════════════════════════════ -->
+<style>
+  /* --- Navbar base --- */
+  .navbar-header {
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+    background: rgba(252, 252, 252, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(9, 33, 93, 0.08);
+    box-shadow: 0 1px 20px rgba(9, 33, 93, 0.06);
+  }
+
+  /* --- Navbar scrolled state --- */
+  .navbar-header.scrolled {
+    background: rgba(252, 252, 252, 0.97);
+    box-shadow: 0 4px 32px rgba(9, 33, 93, 0.12);
+    border-bottom-color: rgba(9, 33, 93, 0.12);
+  }
+
+  /* --- Nav item hover --- */
+  .nav-item:hover {
+    color: #09215D !important;
+  }
+
+  /* --- Botones sociales desktop --- */
+  .social-btn {
+    color: #09215D99;
+    background: transparent;
+  }
+
+  .social-btn:hover {
+    color: #C90203;
+    background: rgba(201, 2, 3, 0.08);
+    transform: scale(1.1);
+  }
+
+  /* --- Mobile nav item hover --- */
+  .mobile-nav-item:hover {
+    background: rgba(9, 33, 93, 0.05);
+    color: #09215D;
+  }
+
+  .mobile-nav-item:active {
+    background: rgba(9, 33, 93, 0.1);
+    transform: scale(0.99);
+  }
+
+  /* --- Botones sociales mobile --- */
+  .social-btn-mobile {
+    color: #09215D88;
+    background: rgba(9, 33, 93, 0.04);
+  }
+
+  .social-btn-mobile:hover {
+    color: #C90203;
+    background: rgba(201, 2, 3, 0.08);
+  }
+
+  /* --- Hamburguesa activa --- */
+  .hamburger-btn-active {
+    background: rgba(9, 33, 93, 0.07);
+  }
+
+  /* --- Line-height fix --- */
+  .h-22 {
+    height: 5.5rem;
+  }
+</style>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- LÓGICA JAVASCRIPT                              -->
+<!-- ═══════════════════════════════════════════════ -->
+<script>
+  // ── Referencias DOM ──────────────────────────────
+  const navbar      = document.getElementById("navbar")!;
+  const hamburger   = document.getElementById("hamburger-btn")!;
+  const mobileMenu  = document.getElementById("mobile-menu")!;
+  const line1       = document.getElementById("ham-line-1")!;
+  const line2       = document.getElementById("ham-line-2")!;
+  const line3       = document.getElementById("ham-line-3")!;
+
+  let isOpen = false;
+
+  // ── Toggle menú mobile ───────────────────────────
+  function toggleMenu() {
+    isOpen = !isOpen;
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+
+    if (isOpen) {
+      // Abrir: calcular altura real del contenido
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+      mobileMenu.style.opacity   = "1";
+
+      // Animar hamburguesa → X
+      line1.style.transform = "translateY(7px) rotate(45deg)";
+      line2.style.opacity   = "0";
+      line2.style.transform = "scaleX(0)";
+      line3.style.transform = "translateY(-7px) rotate(-45deg)";
+      hamburger.classList.add("hamburger-btn-active");
+    } else {
+      // Cerrar
+      mobileMenu.style.maxHeight = "0";
+      mobileMenu.style.opacity   = "0";
+
+      // Restaurar hamburguesa
+      line1.style.transform = "";
+      line2.style.opacity   = "1";
+      line2.style.transform = "";
+      line3.style.transform = "";
+      hamburger.classList.remove("hamburger-btn-active");
+    }
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  // Cerrar al hacer clic en un item mobile
+  document.querySelectorAll(".mobile-nav-item").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (isOpen) toggleMenu();
+    });
+  });
+
+  // ── Scroll: cambio de estilo navbar ─────────────
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+
+    lastScroll = currentScroll;
+  }, { passive: true });
+
+  // ── Cerrar menú al redimensionar a desktop ───────
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024 && isOpen) {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0";
+      mobileMenu.style.opacity   = "0";
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+      line1.style.transform = "";
+      line2.style.opacity   = "1";
+      line2.style.transform = "";
+      line3.style.transform = "";
+      hamburger.classList.remove("hamburger-btn-active");
+    }
+  });
+</script>

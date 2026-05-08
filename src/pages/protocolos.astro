@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+// Datos de Protocolos Institucionales
+const protocolos = [
+  {
+    titulo: "Reglamento Interno",
+    descripcion: "Normas y lineamientos generales que regulan la convivencia y el funcionamiento de nuestra comunidad escolar.",
+    categoria: "Institucional",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_0f2fb05e9c9c4988b82b41e2bcbfb441.pdf"
+  },
+  {
+    titulo: "Reglamento de Evaluación",
+    descripcion: "Criterios, procedimientos y normativas relacionadas con la evaluación y promoción de los estudiantes.",
+    categoria: "Académico",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_f3f6664a0d1641c9b9fdc8ea800f7fd2.pdf"
+  },
+  {
+    titulo: "Uso de Sustancias",
+    descripcion: "Protocolo de actuación frente al consumo, porte o tráfico de drogas y alcohol en el recinto educativo.",
+    categoria: "Prevención",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_d088a9e40ca74362a7ecf7cb19b7c4a8.pdf"
+  },
+  {
+    titulo: "Vulneración de Derechos",
+    descripcion: "Procedimientos para detectar, abordar y derivar casos de vulneración de derechos en estudiantes.",
+    categoria: "Protección",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_fd8838564b884524a4c889656d6556c3.pdf"
+  },
+  {
+    titulo: "Salud Mental",
+    descripcion: "Estrategias de prevención, apoyo y derivación ante situaciones que afecten el bienestar emocional.",
+    categoria: "Bienestar",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_ba3d9d8b06354caabf83217cd7544b1c.pdf"
+  },
+  {
+    titulo: "Plan Sexualidad y Afectividad",
+    descripcion: "Lineamientos formativos para abordar la educación sexual, la afectividad y la equidad de género.",
+    categoria: "Formación",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_6d4dc8ca2d2c4feaaba386c484da0d6d.pdf"
+  },
+  {
+    titulo: "Jornada Escolar Completa",
+    descripcion: "Estructura, distribución horaria y lineamientos operativos de la jornada escolar extendida.",
+    categoria: "Institucional",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_f53fe35e10ca46268909f21e67d778e6.pdf"
+  },
+  {
+    titulo: "Bullying y Ciberbullying",
+    descripcion: "Protocolo de prevención y acción frente a situaciones de acoso escolar presencial o digital.",
+    categoria: "Convivencia",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_b25658052fad489c8ba87cad3c3f16f6.pdf"
+  },
+  {
+    titulo: "Cuenta Pública",
+    descripcion: "Informe anual de gestión institucional, financiera y pedagógica del establecimiento.",
+    categoria: "Institucional",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_20e7c8a9ed504ee48ca959712c3351d2.pdf"
+  },
+  {
+    titulo: "Agresión Sexual",
+    descripcion: "Normativa y flujos de acción inmediata ante presuntas situaciones de connotación sexual.",
+    categoria: "Protección",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_8257a195b9c94819ade506a3992f7c8c.pdf"
+  },
+  {
+    titulo: "Embarazo Adolescente",
+    descripcion: "Lineamientos para garantizar la continuidad de estudios y apoyo a estudiantes madres y padres.",
+    categoria: "Inclusión",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_1e8cf0886edc4ec9975c669fc3f2b476.pdf"
+  },
+  {
+    titulo: "Regulación Emocional",
+    descripcion: "Estrategias de contención y apoyo frente a crisis o desregulación emocional de los estudiantes.",
+    categoria: "Bienestar",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_47e825328c8444e6b968f5732fdf88ff.pdf"
+  },
+  {
+    titulo: "Salida Pedagógica",
+    descripcion: "Normativa, requisitos de seguridad y autorizaciones para actividades educativas fuera del colegio.",
+    categoria: "Académico",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_f9b49261fdbf48ca8dbbd3fb2b9aec53.pdf"
+  },
+  {
+    titulo: "Ideación Suicida",
+    descripcion: "Protocolo de intervención, contención y derivación ante señales de riesgo vital o ideación suicida.",
+    categoria: "Protección",
+    archivo: "https://www.colegiocharlesdarwindeancud.com/_files/ugd/508ab5_1cf605e52af54bacb97ae7f8aad9d73f.pdf"
+  }
+];
+---
+
+<Layout title="Protocolos Institucionales | Colegio Charles Darwin" description="Accede a los distintos reglamentos, protocolos y documentos institucionales que orientan la convivencia y el bienestar de nuestra comunidad educativa.">
+  <Navbar />
+
+  <main class="bg-[#FCFCFC] overflow-hidden">
+    
+    <!-- HERO INSTITUCIONAL -->
+    <section class="relative min-h-[70vh] flex items-center pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <!-- Background Image & Overlays -->
+      <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1581362036224-124b89df50d8?q=80&w=2070&auto=format&fit=crop" 
+          alt="Biblioteca y Documentos" 
+          class="absolute inset-0 w-full h-full object-cover scale-105 animate-slow-zoom"
+        />
+        <!-- Overlay oscuro institucional -->
+        <div class="absolute inset-0 bg-[#09215D]/70 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#09215D]/90 via-[#09215D]/80 to-transparent"></div>
+        <!-- Gradiente de transición hacia el contenido -->
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FCFCFC] to-transparent z-10"></div>
+      </div>
+
+      <!-- Contenido del Hero -->
+      <div class="relative z-10 w-full max-w-5xl mx-auto text-center animate-fade-in-up">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-8">
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          <span class="text-xs font-bold tracking-widest text-white uppercase" style="font-family: 'Inter', sans-serif;">Centro Documental</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight drop-shadow-2xl" style="font-family: 'Poppins', sans-serif; text-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+          Protocolos Institucionales
+        </h1>
+        
+        <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light drop-shadow-md mb-8" style="font-family: 'Inter', sans-serif;">
+          Accede a los distintos reglamentos, protocolos y documentos institucionales que orientan la convivencia, el bienestar y el funcionamiento de nuestra comunidad educativa.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- GRILLA DE DOCUMENTOS -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <!-- Blur decorativo de fondo -->
+      <div class="absolute top-20 right-0 w-96 h-96 bg-[#C90203]/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+      <div class="absolute bottom-20 left-0 w-96 h-96 bg-[#09215D]/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        {protocolos.map((protocolo, index) => (
+          <a 
+            href={protocolo.archivo} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group bg-white rounded-3xl p-6 shadow-lg shadow-[#09215D]/5 border border-[#09215D]/10 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#09215D]/10 transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+            style={`animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: ${index * 0.05}s; opacity: 0;`}
+          >
+            <!-- Overlay sutil en hover -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#09215D]/0 to-[#09215D]/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Cabecera de la Card (Icono + Categoría) -->
+            <div class="flex items-start justify-between mb-6 relative z-10">
+              <!-- Icono PDF Premium -->
+              <div class="w-12 h-12 rounded-2xl bg-[#C90203]/10 text-[#C90203] flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-[#C90203] group-hover:text-white transition-all duration-300">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              
+              <!-- Badge Categoría -->
+              <span class="px-3 py-1 rounded-full bg-[#09215D]/5 text-[#09215D]/70 text-[10px] font-bold uppercase tracking-wider font-sans group-hover:bg-[#09215D]/10 transition-colors duration-300">
+                {protocolo.categoria}
+              </span>
+            </div>
+
+            <!-- Título y Descripción -->
+            <div class="flex-grow relative z-10">
+              <h3 class="text-lg font-bold text-[#09215D] mb-3 leading-tight group-hover:text-[#C90203] transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
+                {protocolo.titulo}
+              </h3>
+              <p class="text-sm text-[#09215D]/70 leading-relaxed font-light" style="font-family: 'Inter', sans-serif;">
+                {protocolo.descripcion}
+              </p>
+            </div>
+
+            <!-- Botón de Acción -->
+            <div class="mt-6 pt-4 border-t border-[#09215D]/5 flex items-center justify-between relative z-10">
+              <span class="text-xs font-semibold text-[#09215D] group-hover:text-[#C90203] transition-colors duration-300" style="font-family: 'Inter', sans-serif;">
+                Ver Documento
+              </span>
+              <div class="w-8 h-8 rounded-full bg-[#09215D]/5 flex items-center justify-center text-[#09215D] group-hover:bg-[#C90203]/10 group-hover:text-[#C90203] group-hover:translate-x-1 transition-all duration-300">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </div>
+            </div>
+            
+          </a>
+        ))}
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Animación inicial del Hero */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Animación sutil de zoom en el fondo */
+  @keyframes slowZoom {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.15); }
+  }
+  .animate-slow-zoom {
+    animation: slowZoom 30s linear infinite alternate;
+  }
+</style>

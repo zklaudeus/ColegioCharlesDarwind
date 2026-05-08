@@ -1,0 +1,218 @@
+---
+// Hero.astro — Colegio Charles Darwin
+---
+
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden w-full px-6 lg:px-12 bg-[#09215D]"
+>
+  <!-- Fondo con imagen y overlay -->
+  <div class="absolute inset-0 w-full h-full z-0">
+    <!-- Imagen de fondo (Colegio/Universidad abstracta) -->
+    <img
+      src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop"
+      alt="Fondo Institucional"
+      class="absolute inset-0 w-full h-full object-cover object-center scale-105 animate-subtle-zoom"
+    />
+    <!-- Overlays para contraste y color institucional -->
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(180deg, rgba(9,33,93,0.5) 0%, rgba(9,33,93,0.85) 100%);"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black/20"></div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div
+    class="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center md:items-start text-center md:text-left mt-24 lg:mt-0 pt-20 lg:pt-0"
+  >
+    <!-- Badge decorativo -->
+    <div
+      class="animate-fade-in-up"
+      style="animation-delay: 0.1s; animation-fill-mode: both;"
+    >
+      <div
+        class="inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full border"
+        style="border-color: rgba(252,252,252,0.15); background: rgba(252,252,252,0.05); backdrop-filter: blur(12px);"
+      >
+        <span class="relative flex h-2.5 w-2.5">
+          <span
+            class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+            style="background-color: #C90203;"></span>
+          <span
+            class="relative inline-flex rounded-full h-2.5 w-2.5"
+            style="background-color: #C90203;"></span>
+        </span>
+        <span
+          class="text-[11px] sm:text-xs font-semibold tracking-[0.15em] uppercase text-white"
+          style="font-family: 'Inter', sans-serif;"
+        >
+          Excelencia Académica
+        </span>
+      </div>
+    </div>
+
+    <!-- Cita principal -->
+    <h1
+      class="animate-fade-in-up text-white text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[1.15] mb-8 max-w-5xl"
+      style="font-family: 'Poppins', sans-serif; text-shadow: 0 4px 20px rgba(0,0,0,0.3); animation-delay: 0.2s; animation-fill-mode: both;"
+    >
+      "Enseñar no es transferir conocimiento, sino crear las posibilidades para
+      su propia producción o construcción."
+    </h1>
+
+    <!-- Autor -->
+    <div
+      class="animate-fade-in-up flex items-center justify-center md:justify-start gap-4 mb-12"
+      style="animation-delay: 0.3s; animation-fill-mode: both;"
+    >
+      <div class="w-8 h-[1px] bg-white/40 hidden md:block"></div>
+      <p
+        class="text-lg md:text-xl font-light"
+        style="color: rgba(252,252,252,0.9); font-family: 'Inter', sans-serif;"
+      >
+        — Paulo Freire
+      </p>
+    </div>
+
+    <!-- Botones de Acción -->
+    <div
+      class="animate-fade-in-up w-full sm:w-auto flex flex-col sm:flex-row gap-4 sm:gap-6"
+      style="animation-delay: 0.4s; animation-fill-mode: both;"
+    >
+      <!-- Botón Principal -->
+      <a
+        href="/nosotros"
+        class="group relative flex justify-center px-8 py-4 sm:py-4.5 rounded-xl text-base font-semibold text-white overflow-hidden transition-transform duration-300 hover:-translate-y-1 w-full sm:w-auto shadow-[0_8px_20px_rgba(9,33,93,0.5)]"
+        style="background-color: #09215D; font-family: 'Inter', sans-serif;"
+      >
+        <div
+          class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent btn-shine-effect"
+        >
+        </div>
+        <span class="relative z-10 flex items-center justify-center gap-2">
+          Conoce Nuestro Colegio
+          <svg
+            class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 8H15M15 8L8 1M15 8L8 15"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- Botón Secundario -->
+      <button
+        type="button"
+        class="group relative px-8 py-4 sm:py-4.5 rounded-xl text-base font-semibold text-white border border-white/30 transition-all duration-300 hover:bg-white/10 hover:border-white w-full sm:w-auto overflow-hidden shadow-lg backdrop-blur-sm"
+        style="font-family: 'Inter', sans-serif;"
+      >
+        <div
+          class="absolute inset-0 w-full h-full bg-[#FCFCFC] transition-transform duration-500 origin-left scale-x-0 group-hover:scale-x-100 opacity-10"
+        >
+        </div>
+        <a
+          href="/proyectos"
+          class="relative z-10 flex items-center justify-center gap-2"
+        >
+          Ver Proyectos
+          <svg
+            class="w-4 h-4 opacity-0 -ml-4 transition-all duration-300 group-hover:opacity-100 group-hover:ml-0"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 4l4 4-4 4"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </button>
+    </div>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in-up"
+    style="animation-delay: 0.8s; animation-fill-mode: both;"
+  >
+    <span
+      class="text-[10px] uppercase tracking-[0.25em] font-medium"
+      style="color: rgba(252,252,252,0.6); font-family: 'Inter', sans-serif;"
+      >Descubrir</span
+    >
+    <div class="w-[1px] h-10 md:h-12 bg-white/20 relative overflow-hidden">
+      <div class="w-full h-1/2 bg-white absolute top-0 animate-scroll-down">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* --- Keyframes --- */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes subtleZoom {
+    from {
+      transform: scale(1.05);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  /* --- Classes Animación --- */
+  .animate-fade-in-up {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-subtle-zoom {
+    animation: subtleZoom 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .animate-scroll-down {
+    animation: scrollDown 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+  }
+
+  /* --- Efecto Shine Botón Principal --- */
+  .btn-shine-effect {
+    transform: skewX(-20deg) translateX(-150%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  a.group:hover .btn-shine-effect,
+  button.group:hover .btn-shine-effect {
+    transform: skewX(-20deg) translateX(150%);
+  }
+</style>

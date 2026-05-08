@@ -1,0 +1,136 @@
+---
+// Conocenos.astro — Sección de transición "Conócenos"
+---
+
+<section id="conocenos" class="relative py-24 lg:py-32 overflow-hidden bg-white">
+  <!-- Fondo con degradado muy sutil -->
+  <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#FCFCFC] to-white pointer-events-none"></div>
+
+  <!-- Decoración de fondo abstracta -->
+  <div class="absolute top-0 right-0 w-1/3 h-full overflow-hidden z-0 pointer-events-none opacity-30 hidden lg:block">
+    <div class="absolute top-[20%] right-[-10%] w-[40rem] h-[40rem] rounded-full blur-[120px]" style="background: radial-gradient(circle, rgba(9,33,93,0.05) 0%, transparent 70%);"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Contenedor flex. reverse en mobile para que la imagen quede arriba -->
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+      
+      <!-- ═══════════════════════════════════════ -->
+      <!-- COLUMNA IZQUIERDA: TEXTO               -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left conocenos-animate">
+        
+        <div class="inline-flex items-center gap-3 mb-6">
+          <span class="w-8 h-[1px]" style="background-color: #09215D33;"></span>
+          <span class="text-xs font-bold uppercase tracking-[0.2em]" style="color: #09215D; font-family: 'Inter', sans-serif;">
+            Nuestra Comunidad
+          </span>
+          <span class="w-8 h-[1px] lg:hidden" style="background-color: #09215D33;"></span>
+        </div>
+        
+        <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-bold mb-6 leading-[1.15]" style="color: #09215D; font-family: 'Poppins', sans-serif;">
+          Conócenos
+        </h2>
+        
+        <h3 class="text-xl md:text-2xl font-medium mb-6" style="color: #09215D; font-family: 'Inter', sans-serif; line-height: 1.5;">
+          Un espacio educativo donde el aprendizaje, los valores y el desarrollo integral se viven día a día en comunidad.
+        </h3>
+        
+        <p class="text-base md:text-lg font-light mb-10 leading-relaxed" style="color: #09215D99; font-family: 'Inter', sans-serif;">
+          Nuestro colegio promueve una educación cercana, inclusiva y moderna, acompañando a cada estudiante en su crecimiento académico, personal y humano.
+        </p>
+        
+        <a 
+          href="/nosotros" 
+          class="group relative inline-flex px-8 py-4 rounded-xl text-base font-semibold text-white overflow-hidden transition-transform duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(201,2,3,0.25)]"
+          style="background-color: #C90203; font-family: 'Inter', sans-serif;"
+        >
+          <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent btn-shine-red"></div>
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            Conocer Más
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+      </div>
+
+      <!-- ═══════════════════════════════════════ -->
+      <!-- COLUMNA DERECHA: IMAGEN                -->
+      <!-- ═══════════════════════════════════════ -->
+      <div class="w-full lg:w-1/2 conocenos-animate" style="transition-delay: 0.2s;">
+        <div class="relative rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(9,33,93,0.15)] group aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[600px] w-full">
+          
+          <!-- Efecto de sombra colorida detrás de la imagen -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-[#09215D] to-[#C90203] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-700"></div>
+
+          <!-- Imagen principal de Unsplash (Estudiantes/Educación) -->
+          <img 
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" 
+            alt="Estudiantes en el campus" 
+            class="relative z-10 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+          />
+
+          <!-- Overlay oscuro sutil en la parte inferior para dar profundidad -->
+          <div class="absolute inset-0 z-20 bg-gradient-to-t from-[#09215D]/40 via-transparent to-transparent opacity-60"></div>
+          
+          <!-- Elemento decorativo flotante estilo Glassmorphism -->
+          <div class="absolute bottom-6 left-6 right-6 z-30 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 transform translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 hidden sm:block">
+            <p class="text-white font-medium text-sm md:text-base tracking-wide" style="font-family: 'Inter', sans-serif;">
+              "Formando el futuro desde hoy"
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* --- Animación al hacer scroll --- */
+  .conocenos-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .conocenos-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- Efecto Shine Botón Rojo --- */
+  .btn-shine-red {
+    transform: skewX(-20deg) translateX(-150%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  a.group:hover .btn-shine-red,
+  button.group:hover .btn-shine-red {
+    transform: skewX(-20deg) translateX(150%);
+  }
+</style>
+
+<script>
+  // Intersection Observer para disparar animación en scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { 
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.conocenos-animate').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>

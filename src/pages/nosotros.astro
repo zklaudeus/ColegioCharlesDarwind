@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Nosotros | Colegio Charles Darwin" description="Conoce la historia, misión y comunidad educativa del Colegio Charles Darwin.">
+  <Navbar />
+
+  <main>
+    <!-- HERO INSTITUCIONAL -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#09215D] pt-40 pb-32">
+      <!-- Background Image -->
+      <div class="absolute inset-0 w-full h-full z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" 
+          alt="Comunidad Educativa Charles Darwin" 
+          class="absolute inset-0 w-full h-full object-cover object-center opacity-50 select-none pointer-events-none"
+          loading="eager"
+        />
+        <!-- Overlay más sofisticado para mejor integración con Navbar blanco -->
+        <div class="absolute inset-0 bg-[#09215D]/40 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#09215D]/60 via-transparent to-[#09215D]/80 z-20"></div>
+        
+        <!-- Degradado inferior para transición suave al blanco -->
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FCFCFC] to-transparent z-30"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-40 text-center px-6 max-w-5xl mx-auto animate-fade-in-up">
+        <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-8 tracking-tighter" style="font-family: 'Poppins', sans-serif; text-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+          Nuestra Comunidad Educativa
+        </h1>
+        <p class="text-lg md:text-2xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed" style="font-family: 'Inter', sans-serif; text-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+          Educando con valores, inclusión y compromiso para formar los líderes íntegros del mañana.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="py-20 lg:py-32 bg-[#FCFCFC] px-6">
+      <div class="max-w-4xl mx-auto text-center scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+        <div class="w-16 h-1 bg-[#C90203] mx-auto mb-10 rounded-full"></div>
+        <p class="text-xl md:text-2xl lg:text-3xl leading-relaxed text-[#09215D] font-light" style="font-family: 'Inter', sans-serif;">
+          "Nuestro colegio busca responder a las necesidades de niños y jóvenes que desean desarrollarse intelectual, física y emocionalmente en un ambiente familiar, cercano y basado en el respeto, la afectividad y la formación valórica."
+        </p>
+      </div>
+    </section>
+
+    <!-- SELLOS EDUCATIVOS -->
+    <section class="py-20 lg:py-28 bg-white px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#09215D] mb-4" style="font-family: 'Poppins', sans-serif;">Nuestros Sellos Educativos</h2>
+          <p class="text-[#09215D]/70 font-medium" style="font-family: 'Inter', sans-serif;">Los pilares que fundamentan nuestra enseñanza</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <!-- CARD 1 -->
+          <div class="group bg-[#FCFCFC] p-10 rounded-3xl border border-[#09215D]/5 hover:shadow-2xl hover:border-transparent transition-all duration-500 scroll-animate opacity-0 translate-y-8">
+            <div class="w-14 h-14 bg-[#09215D]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white text-[#09215D] transition-colors duration-500">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#09215D] mb-4" style="font-family: 'Poppins', sans-serif;">Pedagogía Humanista</h3>
+            <p class="text-[#09215D]/70 leading-relaxed" style="font-family: 'Inter', sans-serif;">
+              Promovemos estudiantes reflexivos, creativos y protagonistas de su aprendizaje mediante experiencias educativas significativas.
+            </p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="group bg-[#FCFCFC] p-10 rounded-3xl border border-[#09215D]/5 hover:shadow-2xl hover:border-transparent transition-all duration-500 scroll-animate opacity-0 translate-y-8" style="transition-delay: 100ms;">
+            <div class="w-14 h-14 bg-[#09215D]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white text-[#09215D] transition-colors duration-500">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#09215D] mb-4" style="font-family: 'Poppins', sans-serif;">Inclusión y Diversidad</h3>
+            <p class="text-[#09215D]/70 leading-relaxed" style="font-family: 'Inter', sans-serif;">
+              Fomentamos el respeto por la diversidad, adaptándonos a las distintas habilidades, necesidades y estilos de aprendizaje.
+            </p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="group bg-[#FCFCFC] p-10 rounded-3xl border border-[#09215D]/5 hover:shadow-2xl hover:border-transparent transition-all duration-500 scroll-animate opacity-0 translate-y-8" style="transition-delay: 200ms;">
+            <div class="w-14 h-14 bg-[#09215D]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white text-[#09215D] transition-colors duration-500">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#09215D] mb-4" style="font-family: 'Poppins', sans-serif;">Tecnología e Inglés</h3>
+            <p class="text-[#09215D]/70 leading-relaxed" style="font-family: 'Inter', sans-serif;">
+              Potenciamos herramientas tecnológicas y el aprendizaje del idioma inglés para enfrentar un mundo globalizado.
+            </p>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="group bg-[#FCFCFC] p-10 rounded-3xl border border-[#09215D]/5 hover:shadow-2xl hover:border-transparent transition-all duration-500 scroll-animate opacity-0 translate-y-8" style="transition-delay: 300ms;">
+            <div class="w-14 h-14 bg-[#09215D]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white text-[#09215D] transition-colors duration-500">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#09215D] mb-4" style="font-family: 'Poppins', sans-serif;">Formación Integral</h3>
+            <p class="text-[#09215D]/70 leading-relaxed" style="font-family: 'Inter', sans-serif;">
+              Impulsamos el crecimiento académico, emocional y social en un ambiente cercano, valórico y comprometido.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN VISUAL (SPLIT LAYOUT) -->
+    <section class="py-20 lg:py-32 bg-[#FCFCFC] overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <!-- Izquierda: Imagen -->
+          <div class="w-full lg:w-1/2 relative scroll-animate opacity-0 -translate-x-8 transition-all duration-1000">
+            <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] w-full">
+              <div class="absolute inset-0 bg-[#09215D]/20 mix-blend-overlay z-10"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" 
+                alt="Educación Centrada" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105 z-0"
+              />
+            </div>
+            <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-br from-[#09215D] to-[#1a3885] rounded-[2rem] -z-10 opacity-50 blur-2xl"></div>
+          </div>
+
+          <!-- Derecha: Texto -->
+          <div class="w-full lg:w-1/2 flex flex-col items-start scroll-animate opacity-0 translate-x-8 transition-all duration-1000" style="transition-delay: 200ms;">
+            <div class="inline-flex items-center gap-3 mb-6">
+              <span class="w-8 h-[1px]" style="background-color: #09215D33;"></span>
+              <span class="text-xs font-bold uppercase tracking-[0.2em]" style="color: #09215D; font-family: 'Inter', sans-serif;">Enfoque Educativo</span>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#09215D] leading-[1.2]" style="font-family: 'Poppins', sans-serif;">
+              Una educación centrada en las personas
+            </h2>
+            <p class="text-lg text-[#09215D]/70 mb-10 leading-relaxed font-light" style="font-family: 'Inter', sans-serif;">
+              Creemos en una educación que pone al estudiante en el centro del aprendizaje, fortaleciendo sus capacidades personales, académicas y sociales en un entorno seguro y acogedor.
+            </p>
+            <a 
+              href="/comunidad" 
+              class="group relative inline-flex px-8 py-4 rounded-xl text-base font-semibold text-white overflow-hidden transition-transform duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(9,33,93,0.25)]"
+              style="background-color: #09215D; font-family: 'Inter', sans-serif;"
+            >
+              <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent btn-shine"></div>
+              <span class="relative z-10 flex items-center justify-center gap-2">
+                Conocer Nuestra Comunidad
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-24 bg-[#09215D] relative overflow-hidden text-center px-6">
+      <div class="absolute inset-0 bg-[#C90203]/5 mix-blend-overlay pointer-events-none"></div>
+      <div class="relative z-10 max-w-3xl mx-auto scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-10 leading-[1.2]" style="font-family: 'Poppins', sans-serif;">
+          Construyendo juntos el futuro de nuestros estudiantes
+        </h2>
+        <a 
+          href="#" 
+          class="inline-block px-10 py-5 rounded-xl text-lg font-bold text-[#09215D] bg-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
+          style="font-family: 'Inter', sans-serif;"
+        >
+          Contáctanos
+        </a>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* Animación general para elementos en scroll */
+  .scroll-animate.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* Fade-in inicial del hero */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Efecto de brillo en el botón azul */
+  .btn-shine {
+    transform: skewX(-20deg) translateX(-150%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  a.group:hover .btn-shine {
+    transform: skewX(-20deg) translateX(150%);
+  }
+</style>
+
+<script>
+  // Intersection Observer para las animaciones al hacer scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
