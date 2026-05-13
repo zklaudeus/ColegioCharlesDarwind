@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contacto | Colegio Charles Darwin" description="Contáctanos. Dirección, teléfonos y formulario de contacto del Colegio Charles Darwin de Ancud.">
+  <Navbar />
+
+  <main class="bg-[#FCFCFC] overflow-hidden">
+
+    <!-- HERO -->
+    <section class="relative min-h-[50vh] flex items-center pt-32 pb-20 px-6 sm:px-6 lg:px-8">
+      <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" alt="Contacto" class="absolute inset-0 w-full h-full object-cover scale-105 animate-slow-zoom" />
+        <div class="absolute inset-0 bg-[#09215D]/60 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#09215D]/90 via-[#09215D]/80 to-[#09215D]/60"></div>
+        <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FCFCFC] to-transparent"></div>
+      </div>
+      <div class="relative z-10 w-full max-w-5xl mx-auto text-center animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-md mb-8">
+          <svg class="w-4 h-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+          <span class="trykker-small tracking-widest text-white uppercase" >Comunícate con nosotros</span>
+        </div>
+        <h1 class="trykker-subtitle sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 tracking-tight drop-shadow-2xl" style=" text-shadow: 0 10px 30px rgba(0,0,0,0.4);">Contacto</h1>
+        <p class="trykker-body text-white/80 max-w-3xl mx-auto leading-relaxed" >Estamos aquí para responder tus consultas. No dudes en comunicarte con nosotros a través de cualquiera de nuestros canales.</p>
+      </div>
+    </section>
+
+    <!-- TARJETAS DE CONTACTO -->
+    <section class="py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+        <!-- Dirección -->
+        <div class="group bg-white rounded-2xl p-8 border border-[#09215D]/5 shadow-lg shadow-[#09215D]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 scroll-animate opacity-0 translate-y-8">
+          <div class="w-14 h-14 rounded-2xl bg-[#09215D]/5 text-[#09215D] flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white transition-colors duration-500">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+          </div>
+          <h3 class="trykker-body text-[#09215D] mb-2" >Dirección</h3>
+          <p class="trykker-small text-[#09215D]/70 leading-relaxed" >Jose Mucke 224<br/>Ancud, Chiloé<br/>Región de Los Lagos, Chile</p>
+        </div>
+
+        <!-- Teléfonos -->
+        <div class="group bg-white rounded-2xl p-8 border border-[#09215D]/5 shadow-lg shadow-[#09215D]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 scroll-animate opacity-0 translate-y-8" style="transition-delay: 100ms;">
+          <div class="w-14 h-14 rounded-2xl bg-[#09215D]/5 text-[#09215D] flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white transition-colors duration-500">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.48-4.08-7.076-6.975l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+          </div>
+          <h3 class="trykker-body text-[#09215D] mb-2" >Teléfonos</h3>
+          <p class="trykker-small text-[#09215D]/70 leading-relaxed" >
+            <a href="tel:+56652629833" class="hover:text-[#C90203] transition-colors">652-629833</a><br/>
+            <a href="tel:+56946894273" class="hover:text-[#C90203] transition-colors">+569 4689 4273</a>
+          </p>
+        </div>
+
+        <!-- Correo -->
+        <div class="group bg-white rounded-2xl p-8 border border-[#09215D]/5 shadow-lg shadow-[#09215D]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 scroll-animate opacity-0 translate-y-8" style="transition-delay: 200ms;">
+          <div class="w-14 h-14 rounded-2xl bg-[#09215D]/5 text-[#09215D] flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white transition-colors duration-500">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+          </div>
+          <h3 class="trykker-body text-[#09215D] mb-2" >Correo Electrónico</h3>
+          <p class="trykker-small text-[#09215D]/70 leading-relaxed break-all" >
+            <a href="mailto:colegiocharlesdarwindeancud@gmail.com" class="hover:text-[#C90203] transition-colors">colegiocharlesdarwindeancud@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Horario -->
+        <div class="group bg-white rounded-2xl p-8 border border-[#09215D]/5 shadow-lg shadow-[#09215D]/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 scroll-animate opacity-0 translate-y-8" style="transition-delay: 300ms;">
+          <div class="w-14 h-14 rounded-2xl bg-[#09215D]/5 text-[#09215D] flex items-center justify-center mb-6 group-hover:bg-[#C90203] group-hover:text-white transition-colors duration-500">
+            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="trykker-body text-[#09215D] mb-2" >Horario</h3>
+          <p class="trykker-small text-[#09215D]/70 leading-relaxed" >Lunes a Viernes<br/>08:00 — 17:00 hrs</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAPA + FORMULARIO -->
+    <section class="py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+        <!-- MAPA -->
+        <div class="w-full lg:w-1/2 scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+          <div class="inline-flex items-center gap-3 mb-6">
+            <span class="w-10 h-[2px] bg-[#C90203] rounded-full"></span>
+            <span class="trykker-small uppercase tracking-widest text-[#C90203]" >Ubicación</span>
+          </div>
+          <h2 class="trykker-subtitle sm:text-4xl md:text-5xl text-[#09215D] mb-8 leading-tight" >Encuéntranos</h2>
+          <p class="trykker-body text-[#09215D]/70 leading-relaxed mb-8" >Estamos ubicados en Jose Mucke 224, en el corazón de Ancud, Chiloé. Te invitamos a visitarnos.</p>
+          
+          <div class="relative rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-2xl shadow-[#09215D]/10 aspect-[4/3] w-full border border-[#09215D]/5">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.123!2d-73.8283!3d-41.8697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9618455b7ceaaaab%3A0x4d7d51cf7c6f8d85!2sJos%C3%A9%20Mucke%20224%2C%20Ancud%2C%20Los%20Lagos!5e0!3m2!1ses!2scl!4v1699000000000!5m2!1ses!2scl"
+              class="absolute inset-0 w-full h-full border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación Colegio Charles Darwin - Ancud"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="w-full lg:w-1/2 scroll-animate opacity-0 translate-y-8 transition-all duration-1000" style="transition-delay: 200ms;">
+          <div class="inline-flex items-center gap-3 mb-6">
+            <span class="w-10 h-[2px] bg-[#09215D] rounded-full"></span>
+            <span class="trykker-small uppercase tracking-widest text-[#09215D]" >Escríbenos</span>
+          </div>
+          <h2 class="trykker-subtitle sm:text-4xl md:text-5xl text-[#09215D] mb-8 leading-tight" >Formulario de Contacto</h2>
+
+          <form id="contact-form" class="space-y-6">
+            <!-- Nombre -->
+            <div>
+              <label for="nombre" class="trykker-small block text-[#09215D] mb-2" >Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Ej: María Pérez" class="trykker-small w-full px-5 py-4 rounded-xl border border-[#09215D]/10 bg-white text-[#09215D] placeholder-[#09215D]/30 focus:outline-none focus:border-[#09215D]/40 focus:ring-2 focus:ring-[#09215D]/10 transition-all duration-300"  />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="trykker-small block text-[#09215D] mb-2" >Correo electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" class="trykker-small w-full px-5 py-4 rounded-xl border border-[#09215D]/10 bg-white text-[#09215D] placeholder-[#09215D]/30 focus:outline-none focus:border-[#09215D]/40 focus:ring-2 focus:ring-[#09215D]/10 transition-all duration-300"  />
+            </div>
+
+            <!-- Teléfono -->
+            <div>
+              <label for="telefono" class="trykker-small block text-[#09215D] mb-2" >Teléfono <span class="font-normal text-[#09215D]/40">(opcional)</span></label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" class="trykker-small w-full px-5 py-4 rounded-xl border border-[#09215D]/10 bg-white text-[#09215D] placeholder-[#09215D]/30 focus:outline-none focus:border-[#09215D]/40 focus:ring-2 focus:ring-[#09215D]/10 transition-all duration-300"  />
+            </div>
+
+            <!-- Asunto -->
+            <div>
+              <label for="asunto" class="trykker-small block text-[#09215D] mb-2" >Asunto</label>
+              <select id="asunto" name="asunto" required class="trykker-small w-full px-5 py-4 rounded-xl border border-[#09215D]/10 bg-white text-[#09215D] focus:outline-none focus:border-[#09215D]/40 focus:ring-2 focus:ring-[#09215D]/10 transition-all duration-300 appearance-none" >
+                <option value="" disabled selected>Selecciona un asunto</option>
+                <option value="admision">Admisión</option>
+                <option value="informacion">Información General</option>
+                <option value="academico">Consulta Académica</option>
+                <option value="convivencia">Convivencia Escolar</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <!-- Mensaje -->
+            <div>
+              <label for="mensaje" class="trykker-small block text-[#09215D] mb-2" >Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..." class="trykker-small w-full px-5 py-4 rounded-xl border border-[#09215D]/10 bg-white text-[#09215D] placeholder-[#09215D]/30 focus:outline-none focus:border-[#09215D]/40 focus:ring-2 focus:ring-[#09215D]/10 transition-all duration-300 resize-none" ></textarea>
+            </div>
+
+            <!-- Botón -->
+            <button type="submit" class="trykker-body group relative w-full sm:w-auto inline-flex justify-center items-center gap-3 px-10 py-4 rounded-xl text-white overflow-hidden transition-all duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(9,33,93,0.25)]" style="background-color: #09215D;">
+              <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/15 to-transparent btn-shine"></div>
+              <span class="relative z-10 flex items-center gap-2">
+                Enviar Mensaje
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 16 16" fill="none"><path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </span>
+            </button>
+
+            <!-- Mensaje de éxito -->
+            <div id="form-success" class="trykker-small hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700" >
+              ✓ Tu mensaje ha sido enviado correctamente. Nos comunicaremos contigo pronto.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes slowZoom {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1.15); }
+  }
+  .animate-slow-zoom {
+    animation: slowZoom 30s linear infinite alternate;
+  }
+  .scroll-animate.is-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
+  .btn-shine {
+    transform: skewX(-20deg) translateX(-150%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  button.group:hover .btn-shine {
+    transform: skewX(-20deg) translateX(150%);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+
+    // Form submit
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const success = document.getElementById('form-success');
+    if (form && success) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        success.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => success.classList.add('hidden'), 5000);
+      });
+    }
+  });
+</script>

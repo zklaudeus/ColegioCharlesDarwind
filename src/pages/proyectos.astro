@@ -17,7 +17,7 @@ const proyectos = [
     id: 'cine',
     titulo: "Cine y Artes Audiovisuales",
     descripcion: "Taller de apreciación y creación audiovisual para desarrollar la expresión creativa y el pensamiento crítico.",
-    slug: "/proyectos/cine",
+    slug: "/proyectos/cine-y-artes-audiovisuales",
     icono: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 16.5v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 16.5c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m4.5 0c.621 0 1.125.504 1.125 1.125M12 20.625v-1.5" /></svg>`,
     color: "from-purple-500 to-indigo-700"
   },
@@ -71,15 +71,15 @@ const proyectos = [
       <!-- Contenido Hero -->
       <div class="inline-flex items-center gap-3 mb-6 animate-fade-in-up">
         <span class="w-8 h-[1px] bg-[#C90203]"></span>
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C90203]" style="font-family: 'Inter', sans-serif;">Áreas de Desarrollo</span>
+        <span class="trykker-small uppercase tracking-[0.2em] text-[#C90203]" >Áreas de Desarrollo</span>
         <span class="w-8 h-[1px] bg-[#C90203]"></span>
       </div>
       
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-[#09215D] mb-8 tracking-tight animate-fade-in-up" style="font-family: 'Poppins', sans-serif; animation-delay: 100ms;">
+      <h1 class="trykker-title lg:text-7xl text-[#09215D] mb-8 tracking-tight animate-fade-in-up" style=" animation-delay: 100ms;">
         Proyectos
       </h1>
       
-      <p class="text-lg md:text-xl text-[#09215D]/70 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up" style="font-family: 'Inter', sans-serif; animation-delay: 200ms;">
+      <p class="trykker-body text-[#09215D]/70 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style=" animation-delay: 200ms;">
         En la actualidad, como establecimiento educacional, nos encontramos trabajando en diversas áreas que buscan fortalecer el desarrollo integral de nuestros estudiantes. Entendemos que la formación escolar no se limita únicamente a los aprendizajes académicos, sino que debe abarcar también aspectos socioemocionales, culturales, deportivos y ambientales, que contribuyan a la construcción de personas íntegras, responsables y comprometidas con su entorno.
       </p>
     </section>
@@ -107,17 +107,17 @@ const proyectos = [
               </div>
 
               <!-- Textos -->
-              <h3 class="text-2xl font-bold text-[#09215D] mb-4 group-hover:text-[#C90203] transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
+              <h3 class="trykker-subtitle text-[#09215D] mb-4 group-hover:text-[#C90203] transition-colors duration-300" >
                 {proyecto.titulo}
               </h3>
               
-              <p class="text-[15px] text-[#09215D]/70 leading-relaxed flex-1 font-light" style="font-family: 'Inter', sans-serif;">
+              <p class="text-[15px] text-[#09215D]/70 leading-relaxed flex-1 font-light" >
                 {proyecto.descripcion}
               </p>
 
               <!-- Botón Animado (Conocer Proyecto) -->
               <div class="mt-10">
-                <a href={proyecto.slug} class="inline-flex items-center gap-3 text-sm font-semibold text-[#09215D] group/btn" style="font-family: 'Inter', sans-serif;">
+                <a href={proyecto.slug} class="trykker-small inline-flex items-center gap-3 text-[#09215D] group/btn" >
                   <span class="relative">
                     Conocer Proyecto
                     <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C90203] transition-all duration-300 group-hover/btn:w-full"></span>

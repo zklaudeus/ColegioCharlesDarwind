@@ -3,13 +3,13 @@
 ---
 
 <section
-  class="relative min-h-screen flex items-center justify-center overflow-hidden w-full px-6 lg:px-12 bg-[#09215D]"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden w-full px-6 lg:px-12 bg-#09215D"
 >
   <!-- Fondo con imagen y overlay -->
   <div class="absolute inset-0 w-full h-full z-0">
     <!-- Imagen de fondo (Colegio/Universidad abstracta) -->
     <img
-      src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop"
+      src="/hero2.jpg"
       alt="Fondo Institucional"
       class="absolute inset-0 w-full h-full object-cover object-center scale-105 animate-subtle-zoom"
     />
@@ -24,7 +24,7 @@
 
   <!-- Contenido principal -->
   <div
-    class="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center md:items-start text-center md:text-left mt-24 lg:mt-0 pt-20 lg:pt-0"
+    class="relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center md:items-start text-center md:text-left pt-32 lg:pt-32 pb-28 sm:pb-20 lg:pb-0"
   >
     <!-- Badge decorativo -->
     <div
@@ -43,10 +43,7 @@
             class="relative inline-flex rounded-full h-2.5 w-2.5"
             style="background-color: #C90203;"></span>
         </span>
-        <span
-          class="text-[11px] sm:text-xs font-semibold tracking-[0.15em] uppercase text-white"
-          style="font-family: 'Inter', sans-serif;"
-        >
+        <span class="trykker-small tracking-[0.15em] uppercase text-white">
           Excelencia Académica
         </span>
       </div>
@@ -54,8 +51,8 @@
 
     <!-- Cita principal -->
     <h1
-      class="animate-fade-in-up text-white text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[1.15] mb-8 max-w-5xl"
-      style="font-family: 'Poppins', sans-serif; text-shadow: 0 4px 20px rgba(0,0,0,0.3); animation-delay: 0.2s; animation-fill-mode: both;"
+      class="animate-fade-in-up text-white trykker-hero leading-[1.15] mb-8"
+      style="text-shadow: 0 4px 20px rgba(0,0,0,0.3); animation-delay: 0.2s; animation-fill-mode: both;"
     >
       "Enseñar no es transferir conocimiento, sino crear las posibilidades para
       su propia producción o construcción."
@@ -66,25 +63,22 @@
       class="animate-fade-in-up flex items-center justify-center md:justify-start gap-4 mb-12"
       style="animation-delay: 0.3s; animation-fill-mode: both;"
     >
-      <div class="w-8 h-[1px] bg-white/40 hidden md:block"></div>
-      <p
-        class="text-lg md:text-xl font-light"
-        style="color: rgba(252,252,252,0.9); font-family: 'Inter', sans-serif;"
-      >
+      <div class="w-8 h-0.5px bg-white/40 hidden md:block"></div>
+      <p class="trykker-body" style="color: rgba(252,252,252,0.9);">
         — Paulo Freire
       </p>
     </div>
 
     <!-- Botones de Acción -->
     <div
-      class="animate-fade-in-up w-full sm:w-auto flex flex-col sm:flex-row gap-4 sm:gap-6"
+      class="animate-fade-in-up w-full sm:w-auto flex flex-col sm:flex-row gap-4 sm:gap-6 px-4 sm:px-0"
       style="animation-delay: 0.4s; animation-fill-mode: both;"
     >
       <!-- Botón Principal -->
       <a
         href="/nosotros"
-        class="group relative flex justify-center px-8 py-4 sm:py-4.5 rounded-xl text-base font-semibold text-white overflow-hidden transition-transform duration-300 hover:-translate-y-1 w-full sm:w-auto shadow-[0_8px_20px_rgba(9,33,93,0.5)]"
-        style="background-color: #09215D; font-family: 'Inter', sans-serif;"
+        class="group relative flex justify-center px-8 py-4 rounded-xl trykker-small text-white overflow-hidden transition-transform duration-300 hover:-translate-y-1 w-full sm:w-auto shadow-[0_8px_20px_rgba(9,33,93,0.5)]"
+        style="background-color: #09215D;"
       >
         <div
           class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent btn-shine-effect"
@@ -109,19 +103,15 @@
       </a>
 
       <!-- Botón Secundario -->
-      <button
-        type="button"
-        class="group relative px-8 py-4 sm:py-4.5 rounded-xl text-base font-semibold text-white border border-white/30 transition-all duration-300 hover:bg-white/10 hover:border-white w-full sm:w-auto overflow-hidden shadow-lg backdrop-blur-sm"
-        style="font-family: 'Inter', sans-serif;"
+      <a
+        href="/proyectos"
+        class="group relative flex justify-center px-8 py-4 rounded-xl trykker-small text-white border border-white/30 transition-all duration-300 hover:bg-white/10 hover:border-white hover:-translate-y-1 w-full sm:w-auto overflow-hidden shadow-lg backdrop-blur-sm"
       >
         <div
           class="absolute inset-0 w-full h-full bg-[#FCFCFC] transition-transform duration-500 origin-left scale-x-0 group-hover:scale-x-100 opacity-10"
         >
         </div>
-        <a
-          href="/proyectos"
-          class="relative z-10 flex items-center justify-center gap-2"
-        >
+        <span class="relative z-10 flex items-center justify-center gap-2">
           Ver Proyectos
           <svg
             class="w-4 h-4 opacity-0 -ml-4 transition-all duration-300 group-hover:opacity-100 group-hover:ml-0"
@@ -136,8 +126,8 @@
               stroke-linecap="round"
               stroke-linejoin="round"></path>
           </svg>
-        </a>
-      </button>
+        </span>
+      </a>
     </div>
   </div>
 
@@ -147,9 +137,8 @@
     style="animation-delay: 0.8s; animation-fill-mode: both;"
   >
     <span
-      class="text-[10px] uppercase tracking-[0.25em] font-medium"
-      style="color: rgba(252,252,252,0.6); font-family: 'Inter', sans-serif;"
-      >Descubrir</span
+      class="uppercase tracking-[0.25em] trykker-small"
+      style="color: rgba(252,252,252,0.6);">Descubrir</span
     >
     <div class="w-[1px] h-10 md:h-12 bg-white/20 relative overflow-hidden">
       <div class="w-full h-1/2 bg-white absolute top-0 animate-scroll-down">

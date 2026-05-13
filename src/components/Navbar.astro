@@ -34,10 +34,10 @@ const currentPath = Astro.url.pathname;
 
         <!-- Texto del colegio -->
         <div class="leading-tight">
-          <p class="text-xs font-medium tracking-widest uppercase text-red-600" style="font-family: 'Inter', sans-serif; color: #C90203; letter-spacing: 0.12em;">
+          <p class="trykker-small text-xs font-medium tracking-widest uppercase text-red-600" style=" color: #C90203; letter-spacing: 0.12em;">
             Colegio
           </p>
-          <h1 class="font-bold tracking-tight text-base lg:text-lg leading-none transition-colors duration-300 group-hover:opacity-80" style="font-family: 'Poppins', sans-serif; color: #09215D;">
+          <h1 class="trykker-small tracking-tight text-base lg:text-lg leading-none transition-colors duration-300 group-hover:opacity-80" style="color: #09215D;">
             Charles Darwin
           </h1>
         </div>
@@ -57,14 +57,14 @@ const currentPath = Astro.url.pathname;
             { name: "Comunidad", href: "/comunidad" },
             { name: "Proyectos", href: "/proyectos" },
             { name: "Protocolos", href: "/protocolos" },
-            { name: "Contacto", href: "#" },
+            { name: "Contacto", href: "/contacto" },
           ].map((item) => {
             const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
             return (
             <a
               href={item.href}
-              class={`nav-item relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group/item ${isActive ? 'bg-[#09215D0D]' : ''}`}
-              style={`font-family: 'Inter', sans-serif; color: ${isActive ? '#C90203' : '#09215D'};`}
+              class={`trykker-small nav-item relative px-4 py-2 text-sm  transition-all duration-300 rounded-lg group/item ${isActive ? 'bg-[#09215D0D]' : ''}`}
+              style={`   color: ${isActive ? '#C90203' : '#09215D'};`}
             >
               <span class="relative z-10 transition-colors duration-300 group-hover/item:text-[#C90203]" style="color: inherit;">
                 {item.name}
@@ -183,9 +183,9 @@ const currentPath = Astro.url.pathname;
     style="max-height: 0; opacity: 0;"
     aria-hidden="true"
   >
-    <div class="mx-4 mb-4 rounded-2xl overflow-hidden shadow-2xl border" style="border-color: #09215D14; background: rgba(252,252,252,0.98);">
+    <div class="mx-4 mb-4 rounded-2xl overflow-hidden shadow-2xl border trykker-small" style="border-color: #09215D14; background: rgba(252,252,252,0.98);">
       <!-- Nav items mobile -->
-      <nav class="px-2 pt-3 pb-1 flex flex-col gap-1">
+      <nav class="px-2 pt-3 pb-1 flex flex-col gap-1 trykker-small">
         {
           [
             { label: "Inicio",     href: "/",         emoji: "🏠" },
@@ -193,7 +193,7 @@ const currentPath = Astro.url.pathname;
             { label: "Comunidad",  href: "/comunidad", emoji: "👥" },
             { label: "Proyectos",  href: "/proyectos",         emoji: "🔬" },
             { label: "Protocolos", href: "/protocolos",         emoji: "📋" },
-            { label: "Contacto",   href: "#",         emoji: "✉️" },
+            { label: "Contacto",   href: "/contacto",         emoji: "✉️" },
           ].map(({ label, href, emoji }) => {
             const isActive = currentPath === href || (href !== '/' && currentPath.startsWith(href));
             return (
@@ -220,7 +220,7 @@ const currentPath = Astro.url.pathname;
 
       <!-- Iconos sociales mobile -->
       <div class="px-4 py-3 flex items-center gap-3">
-        <p class="text-xs font-medium mr-1" style="font-family: 'Inter', sans-serif; color: #09215D66;">Síguenos</p>
+        <p class="trykker-small mr-1" style="color: #09215D66;">Síguenos</p>
 
         <a
           href="https://www.instagram.com/darwindeancud/?hl=es-la"
@@ -274,7 +274,7 @@ const currentPath = Astro.url.pathname;
 <style>
   /* --- Navbar base --- */
   .navbar-header {
-    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+    font-family: 'Trykker', serif;
     background: rgba(252, 252, 252, 0.85);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);

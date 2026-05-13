@@ -208,13 +208,13 @@ const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administrac
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
       <div class="inline-flex items-center gap-3 mb-4">
         <span class="w-8 h-[1px] bg-[#C90203]"></span>
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#C90203]" style="font-family: 'Inter', sans-serif;">Colegio Charles Darwin</span>
+        <span class="trykker-small uppercase tracking-[0.2em] text-[#C90203]" >Colegio Charles Darwin</span>
         <span class="w-8 h-[1px] bg-[#C90203]"></span>
       </div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#09215D] mb-6 tracking-tight" style="font-family: 'Poppins', sans-serif;">
+      <h1 class="trykker-title text-[#09215D] mb-6 tracking-tight" >
         Nuestro Equipo
       </h1>
-      <p class="text-lg text-[#09215D]/70 max-w-3xl mx-auto leading-relaxed font-light" style="font-family: 'Inter', sans-serif;">
+      <p class="trykker-body text-[#09215D]/70 max-w-3xl mx-auto leading-relaxed" >
         Conoce a los profesionales que forman parte de nuestra comunidad educativa, comprometidos con la formación, acompañamiento e inclusión de nuestros estudiantes.
       </p>
     </section>
@@ -226,7 +226,7 @@ const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administrac
           <button 
             class={`filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${index === 0 ? 'bg-[#09215D] text-white border-[#09215D] shadow-md' : 'bg-white text-[#09215D]/70 border-[#09215D]/10 hover:border-[#09215D]/30 hover:bg-[#09215D]/5'}`}
             data-target={cat}
-            style="font-family: 'Inter', sans-serif;"
+            
           >
             {cat}
           </button>
@@ -256,12 +256,12 @@ const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administrac
                       alt={persona.nombre}
                       class="w-full h-full object-cover object-top"
                     />
-                  : <span class="text-3xl font-bold text-[#09215D]/50 font-sans">{persona.nombre.charAt(0)}</span>
+                  : <span class="trykker-subtitle text-[#09215D]/50">{persona.nombre.charAt(0)}</span>
                 }
               </div>
 
-              <h4 class="text-white text-lg font-bold font-sans leading-tight mb-2 relative z-10" style="font-family: 'Poppins', sans-serif;">{persona.nombre}</h4>
-              <span class="inline-block bg-white/10 text-white text-[10px] font-semibold px-3 py-1.5 rounded-full border border-white/20 tracking-wider uppercase relative z-10" style="font-family: 'Inter', sans-serif;">
+              <h4 class="trykker-body text-white leading-tight mb-2 relative z-10" >{persona.nombre}</h4>
+              <span class="inline-block bg-white/10 text-white text-[10px] font-semibold px-3 py-1.5 rounded-full border border-white/20 tracking-wider uppercase relative z-10" >
                 {persona.cargo}
               </span>
             </div>
@@ -278,7 +278,7 @@ const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administrac
                 </div>
                 <div>
                   <p class="text-[10px] font-sans text-[#09215D]/50 uppercase tracking-widest mb-0.5 font-semibold">Área / Especialidad</p>
-                  <p class="text-[#09215D] font-sans text-sm font-medium leading-snug">{persona.area}</p>
+                  <p class="trykker-small text-[#09215D] leading-snug">{persona.area}</p>
                 </div>
               </div>
 
@@ -291,7 +291,7 @@ const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administrac
                 </div>
                 <div>
                   <p class="text-[10px] font-sans text-[#09215D]/50 uppercase tracking-widest mb-0.5 font-semibold">Perfil</p>
-                  <p class="text-xs text-[#09215D]/80 font-sans leading-relaxed" style="font-family: 'Inter', sans-serif;">{persona.descripcion}</p>
+                  <p class="trykker-small text-[#09215D]/80 leading-relaxed" >{persona.descripcion}</p>
                 </div>
               </div>
 
@@ -302,7 +302,7 @@ const categoriasFiltro = ["Todos", "Directivos", "Docentes", "PIE", "Administrac
 
       <!-- Mensaje cuando no hay resultados en el filtro -->
       <div id="no-results-msg" class="hidden text-center py-12">
-        <p class="text-[#09215D]/50 text-lg font-medium" style="font-family: 'Inter', sans-serif;">No se encontraron miembros en esta categoría.</p>
+        <p class="trykker-body text-[#09215D]/50" >No se encontraron miembros en esta categoría.</p>
       </div>
     </section>
 

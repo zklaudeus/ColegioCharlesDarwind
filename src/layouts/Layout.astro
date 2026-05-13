@@ -31,7 +31,7 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Trykker&display=swap"
       rel="stylesheet"
     />
 
@@ -42,7 +42,7 @@ const {
   </body>
 </html>
 
-<style>
+<style is:global>
   *,
   *::before,
   *::after {
@@ -61,5 +61,66 @@ const {
     color: #09215D;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ══════════════════════════════════════════════ */
+  /* TIPOGRAFÍA TRYKKER — Clases utilitarias       */
+  /* ══════════════════════════════════════════════ */
+
+  /* Base Trykker */
+  .trykker {
+    font-family: 'Trykker', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* ── Títulos principales (Hero, H1) ── */
+  .trykker-hero {
+    font-family: 'Trykker', serif;
+    font-weight: 400;
+    font-size: 2rem;          /* 32px mobile */
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 640px)  { .trykker-hero { font-size: 3rem; } }      /* 48px */
+  @media (min-width: 768px)  { .trykker-hero { font-size: 3.75rem; } }   /* 60px */
+  @media (min-width: 1024px) { .trykker-hero { font-size: 4.5rem; } }    /* 72px */
+
+  /* ── Títulos de sección (H2) ── */
+  .trykker-title {
+    font-family: 'Trykker', serif;
+    font-weight: 400;
+    font-size: 1.75rem;       /* 28px mobile */
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  @media (min-width: 640px)  { .trykker-title { font-size: 2.25rem; } }  /* 36px */
+  @media (min-width: 768px)  { .trykker-title { font-size: 3rem; } }     /* 48px */
+
+  /* ── Subtítulos (H3, sección secundaria) ── */
+  .trykker-subtitle {
+    font-family: 'Trykker', serif;
+    font-weight: 400;
+    font-size: 1.25rem;       /* 20px mobile */
+    line-height: 1.3;
+  }
+  @media (min-width: 640px)  { .trykker-subtitle { font-size: 1.5rem; } }  /* 24px */
+  @media (min-width: 768px)  { .trykker-subtitle { font-size: 1.75rem; } } /* 28px */
+
+  /* ── Texto cuerpo (párrafos, descripciones) ── */
+  .trykker-body {
+    font-family: 'Trykker', serif;
+    font-weight: 400;
+    font-size: 1rem;          /* 16px mobile */
+    line-height: 1.75;
+  }
+  @media (min-width: 640px)  { .trykker-body { font-size: 1.125rem; } }  /* 18px */
+
+  /* ── Texto pequeño (badges, labels, captions) ── */
+  .trykker-small {
+    font-family: 'Trykker', serif;
+    font-weight: 400;
+    font-size: 0.875rem;      /* 14px */
+    line-height: 1.5;
   }
 </style>

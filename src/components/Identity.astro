@@ -2,100 +2,182 @@
 // Identity.astro — Sección de Identidad Educativa (Visión y Misión)
 ---
 
-<section id="identidad" class="relative py-24 lg:py-32 overflow-hidden bg-[#FCFCFC]">
-  
+<section
+  id="identidad"
+  class="relative py-24 lg:py-32 overflow-hidden bg-[#FCFCFC]"
+>
   <!-- Decoración de fondo suave (Efecto de luz desenfocada) -->
-  <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-    <div class="absolute top-[-10%] left-[-5%] w-[40rem] h-[40rem] rounded-full blur-[100px] opacity-40" style="background: radial-gradient(circle, rgba(9,33,93,0.06) 0%, rgba(252,252,252,0) 70%);"></div>
-    <div class="absolute bottom-[-10%] right-[-5%] w-[40rem] h-[40rem] rounded-full blur-[100px] opacity-40" style="background: radial-gradient(circle, rgba(201,2,3,0.04) 0%, rgba(252,252,252,0) 70%);"></div>
+  <div
+    class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none"
+  >
+    <div
+      class="absolute top-[-10%] left-[-5%] w-[40rem] h-[40rem] rounded-full blur-[100px] opacity-40"
+      style="background: radial-gradient(circle, rgba(9,33,93,0.06) 0%, rgba(252,252,252,0) 70%);"
+    >
+    </div>
+    <div
+      class="absolute bottom-[-10%] right-[-5%] w-[40rem] h-[40rem] rounded-full blur-[100px] opacity-40"
+      style="background: radial-gradient(circle, rgba(201,2,3,0.04) 0%, rgba(252,252,252,0) 70%);"
+    >
+    </div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-    
     <!-- Encabezado de la Sección -->
     <div class="text-center max-w-3xl mx-auto mb-20 identity-animate">
       <div class="inline-flex items-center gap-3 mb-6">
-        <span class="w-10 h-[1px]" style="background-color: rgba(201,2,3,0.3);"></span>
-        <span class="text-xs font-bold uppercase tracking-[0.2em]" style="color: #C90203; font-family: 'Inter', sans-serif;">
+        <span class="w-10 h-[1px]" style="background-color: rgba(201,2,3,0.3);"
+        ></span>
+        <span
+          class="text-xs trykker-small uppercase tracking-[0.2em]"
+          style="color: #C90203;"
+        >
           Quiénes Somos
         </span>
-        <span class="w-10 h-[1px]" style="background-color: rgba(201,2,3,0.3);"></span>
+        <span class="w-10 h-[1px]" style="background-color: rgba(201,2,3,0.3);"
+        ></span>
       </div>
-      
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight" style="color: #09215D; font-family: 'Poppins', sans-serif;">
+
+      <h2
+        class="text-4xl md:text-5xl trykker-title mb-6 leading-tight"
+        style="color: #09215D"
+      >
         Nuestra Identidad Educativa
       </h2>
-      
-      <p class="text-lg md:text-xl font-light" style="color: #09215D99; font-family: 'Inter', sans-serif; line-height: 1.7;">
-        Comprometidos con la formación integral, el desarrollo humano y la excelencia académica.
+
+      <p
+        class="text-lg md:text-xl trykker-subtitle"
+        style="color: #09215D99; line-height: 1.7;"
+      >
+        Comprometidos con la formación integral, el desarrollo humano y la
+        excelencia académica.
       </p>
     </div>
 
     <!-- Contenedor de Cards -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-      
       <!-- ═══════════════════════════════════════ -->
       <!-- CARD: VISIÓN                            -->
       <!-- ═══════════════════════════════════════ -->
-      <div 
-        class="group relative bg-white rounded-[2rem] p-10 lg:p-14 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(9,33,93,0.12)] identity-animate shadow-[0_4px_20px_rgba(9,33,93,0.03)] border border-gray-100/50" 
+      <div
+        class="group relative bg-white rounded-[2rem] p-10 lg:p-14 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(9,33,93,0.12)] identity-animate shadow-[0_4px_20px_rgba(9,33,93,0.03)] border border-gray-100/50"
         style="transition-delay: 0.15s;"
       >
         <!-- Borde sutil superior en hover -->
-        <div class="absolute top-0 left-0 w-full h-1 bg-[#C90203] rounded-t-[2rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+        <div
+          class="absolute top-0 left-0 w-full h-1 bg-[#C90203] rounded-t-[2rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        >
+        </div>
 
         <!-- Ícono -->
-        <div class="w-16 h-16 rounded-2xl mb-8 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background: rgba(9,33,93,0.04); color: #09215D;">
+        <div
+          class="w-16 h-16 rounded-2xl mb-8 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+          style="background: rgba(9,33,93,0.04); color: #09215D;"
+        >
           <!-- SVG Ojo / Visión hacia el futuro -->
-          <svg viewBox="0 0 24 24" fill="none" class="w-8 h-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2.5 12c0-1.2 4.4-6.5 9.5-6.5s9.5 5.3 9.5 6.5-4.4 6.5-9.5 6.5S2.5 13.2 2.5 12z"/>
-            <circle cx="12" cy="12" r="3"/>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M2.5 12c0-1.2 4.4-6.5 9.5-6.5s9.5 5.3 9.5 6.5-4.4 6.5-9.5 6.5S2.5 13.2 2.5 12z"
+            ></path>
+            <circle cx="12" cy="12" r="3"></circle>
           </svg>
         </div>
-        
-        <h3 class="text-3xl md:text-3xl font-bold mb-6" style="color: #09215D; font-family: 'Poppins', sans-serif;">
+
+        <h3
+          class="text-3xl md:text-3xl trykker-subtitle mb-6"
+          style="color: #09215D;"
+        >
           Visión
         </h3>
-        
-        <p class="text-base md:text-lg font-light leading-relaxed" style="color: #09215Dcc; font-family: 'Inter', sans-serif;">
-          Nuestro sueño es llegar a ser una comunidad educativa de excelencia, comprometida con altos estándares de calidad, brindando a nuestros estudiantes oportunidades de crecimiento personal y experiencias educativas significativas que impulsen una formación integral capaz de prepararlos para enfrentar con éxito las distintas etapas de su vida.
+
+        <p
+          class="text-base md:text-lg trykker-body leading-relaxed"
+          style="color: #09215Dcc;"
+        >
+          Nuestro sueño es llegar a ser una comunidad educativa de excelencia,
+          comprometida con altos estándares de calidad, brindando a nuestros
+          estudiantes oportunidades de crecimiento personal y experiencias
+          educativas significativas que impulsen una formación integral capaz de
+          prepararlos para enfrentar con éxito las distintas etapas de su vida.
         </p>
 
         <!-- Elemento decorativo inferior animado -->
-        <div class="mt-10 w-12 h-1 rounded-full transition-all duration-500 group-hover:w-24" style="background-color: #C90203;"></div>
+        <div
+          class="mt-10 w-12 h-1 rounded-full transition-all duration-500 group-hover:w-24"
+          style="background-color: #C90203;"
+        >
+        </div>
       </div>
 
       <!-- ═══════════════════════════════════════ -->
       <!-- CARD: MISIÓN                            -->
       <!-- ═══════════════════════════════════════ -->
-      <div 
-        class="group relative bg-white rounded-[2rem] p-10 lg:p-14 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(9,33,93,0.12)] identity-animate shadow-[0_4px_20px_rgba(9,33,93,0.03)] border border-gray-100/50" 
+      <div
+        class="group relative bg-white rounded-[2rem] p-10 lg:p-14 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-15px_rgba(9,33,93,0.12)] identity-animate shadow-[0_4px_20px_rgba(9,33,93,0.03)] border border-gray-100/50"
         style="transition-delay: 0.3s;"
       >
         <!-- Borde sutil superior en hover -->
-        <div class="absolute top-0 left-0 w-full h-1 bg-[#09215D] rounded-t-[2rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+        <div
+          class="absolute top-0 left-0 w-full h-1 bg-[#09215D] rounded-t-[2rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        >
+        </div>
 
         <!-- Ícono -->
-        <div class="w-16 h-16 rounded-2xl mb-8 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3" style="background: rgba(9,33,93,0.04); color: #09215D;">
+        <div
+          class="w-16 h-16 rounded-2xl mb-8 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3"
+          style="background: rgba(9,33,93,0.04); color: #09215D;"
+        >
           <!-- SVG Libro / Bandera / Misión -->
-          <svg viewBox="0 0 24 24" fill="none" class="w-8 h-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-            <path d="M12 6v6l4-2"/>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+            ></path>
+            <path d="M12 6v6l4-2"></path>
           </svg>
         </div>
-        
-        <h3 class="text-3xl md:text-3xl font-bold mb-6" style="color: #09215D; font-family: 'Poppins', sans-serif;">
+
+        <h3
+          class="text-3xl md:text-3xl trykker-subtitle mb-6"
+          style="color: #09215D"
+        >
           Misión
         </h3>
-        
-        <p class="text-base md:text-lg font-light leading-relaxed" style="color: #09215Dcc; font-family: 'Inter', sans-serif;">
-          La misión del Colegio Charles Darwin es formar buenos ciudadanos, educando para la vida, el conocimiento, el amor y el trabajo. Promovemos un ambiente acogedor que favorece el desarrollo valórico, cultural y académico de nuestros estudiantes, potenciando sus habilidades y preparándolos para enfrentar los desafíos de la sociedad y de la educación superior.
+
+        <p
+          class="text-base md:text-lg trykker-body leading-relaxed"
+          style="color: #09215Dcc; "
+        >
+          La misión del Colegio Charles Darwin es formar buenos ciudadanos,
+          educando para la vida, el conocimiento, el amor y el trabajo.
+          Promovemos un ambiente acogedor que favorece el desarrollo valórico,
+          cultural y académico de nuestros estudiantes, potenciando sus
+          habilidades y preparándolos para enfrentar los desafíos de la sociedad
+          y de la educación superior.
         </p>
 
         <!-- Elemento decorativo inferior animado -->
-        <div class="mt-10 w-12 h-1 rounded-full transition-all duration-500 group-hover:w-24" style="background-color: #09215D;"></div>
+        <div
+          class="mt-10 w-12 h-1 rounded-full transition-all duration-500 group-hover:w-24"
+          style="background-color: #09215D;"
+        >
+        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -105,9 +187,11 @@
   .identity-animate {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+      opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   .identity-animate.is-visible {
     opacity: 1;
     transform: translateY(0);
@@ -116,21 +200,24 @@
 
 <script>
   // Intersection Observer para disparar la animación cuando los elementos entren en el viewport
-  document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          // Dejar de observar una vez que ya es visible para que la animación no se repita
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { 
-      threshold: 0.15, // Ejecutar cuando el 15% del elemento sea visible
-      rootMargin: '0px 0px -50px 0px' // Ligeramente antes de llegar al borde inferior
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            // Dejar de observar una vez que ya es visible para que la animación no se repita
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15, // Ejecutar cuando el 15% del elemento sea visible
+        rootMargin: "0px 0px -50px 0px", // Ligeramente antes de llegar al borde inferior
+      },
+    );
 
-    document.querySelectorAll('.identity-animate').forEach(el => {
+    document.querySelectorAll(".identity-animate").forEach((el) => {
       observer.observe(el);
     });
   });
